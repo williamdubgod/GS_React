@@ -8,7 +8,6 @@ import {
   Keyboard,
   TouchableWithoutFeedback,
 } from 'react-native';
-import { Picker } from '@react-native-picker/picker';
 import { Ionicons } from '@expo/vector-icons';
 import { auth } from '../../config/firebase';
 import estilos from './estilos';
@@ -21,12 +20,10 @@ import ObesidadeImage from '../../assets/obesidade.png';
 
 export default function UserScreen({ navigation }) {
   const usuario = auth.currentUser;
-  const [sexo, setSexo] = useState('M');
   const [peso, setPeso] = useState('');
   const [altura, setAltura] = useState('');
   const [imc, setIMC] = useState(null);
   const [situacao, setSituacao] = useState('');
-  const [pickerVisible, setPickerVisible] = useState(false);
   const [camposPreenchidos, setCamposPreenchidos] = useState(false);
 
   const handleLogout = async () => {
@@ -56,10 +53,36 @@ export default function UserScreen({ navigation }) {
       }
 
       setCamposPreenchidos(true);
+
+      // Calcular a porcentagem de saúde
+      const porcentagemSaude = calcularPorcentagemSaude(calculoIMC);
+
+      // Navegar para HomeScreen com os parâmetros
+      navigation.navigate('HomeScreen', { porcentagemSaude });
     } else {
       setCamposPreenchidos(false);
       setIMC(null);
       setSituacao('');
+    }
+  };
+
+  const calcularPorcentagemSaude = (imc) => {
+    if (imc < 16) {
+      return 50;
+    } else if (imc >= 16 && imc < 17) {
+      return 60;
+    } else if (imc >= 17 && imc < 18.5) {
+      return 70;
+    } else if (imc >= 18.5 && imc < 24.9) {
+      return 100;
+    } else if (imc >= 25 && imc < 29.9) {
+      return 80;
+    } else if (imc >= 30 && imc < 34.9) {
+      return 60;
+    } else if (imc >= 35 && imc < 39.9) {
+      return 40;
+    } else {
+      return 30;
     }
   };
 

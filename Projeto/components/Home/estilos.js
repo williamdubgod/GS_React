@@ -18,6 +18,19 @@ export default StyleSheet.create({
     width: 0.15 * width,
     height: 0.1 * width,
   },
+  saudeContainer: (porcentagemSaude) => ({
+    backgroundColor: porcentagemSaude > 50 ? '#00FF00' : porcentagemSaude > 30 ? '#FFA500' : '#FF0000',
+    width: 0.6 * width, 
+    padding: 10,
+    borderRadius: 10,
+    marginVertical: 10,
+  }),
+  saudeText: {
+    color: '#FFFFFF',
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center'
+  },
   buttonsContainer: {
     paddingHorizontal: 0.04 * width,
   },
@@ -57,10 +70,12 @@ export default StyleSheet.create({
   },
   imageText: {
     position: 'absolute', 
-    bottom: 45, 
+    bottom: 10, 
     fontWeight: 'bold',
     fontSize: 24,
     textAlign: 'center',
     color: 'white', 
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+    width: '90%'
   },
 });

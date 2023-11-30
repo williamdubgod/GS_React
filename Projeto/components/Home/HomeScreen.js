@@ -4,13 +4,20 @@ import { Icon } from 'react-native-elements';
 import Footer from '../Rodape/Footer';
 import estilos from './estilos';
 
-const HomeScreen = () => {
+const HomeScreen = ({ route }) => {
   const numberOfImages = 3;
+
+  const porcentagemSaude = route.params?.porcentagemSaude ?? null;
 
   return (
     <View style={estilos.container}>
       <View style={estilos.header}>
         <Image source={require('../../assets/miniLogo.png')} style={estilos.logo} />
+        {porcentagemSaude !== null && (
+          <View style={estilos.saudeContainer(porcentagemSaude)}>
+            <Text style={estilos.saudeText}>{`Saúde: ${porcentagemSaude}%`}</Text>
+          </View>
+        )}
         <TouchableOpacity>
           <Icon name="notifications" type="material-icons" size={34} color="grey" />
         </TouchableOpacity>

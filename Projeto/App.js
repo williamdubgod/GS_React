@@ -5,8 +5,8 @@ import InicialPage from './components/Inicial/InicialPage';
 import LoginScreen from './components/Login/LoginScreen';
 import RegisterScreen from './components/Cadastro/RegisterScreen';
 import HomeScreen from './components/Home/HomeScreen';
-import SearchScreen from './components/Busca/SearchScreen';
-import RequestScreen from './components/Pedidos/RequestScreen';
+import HealthSocial from './components/HealthSocial/HealthSocial';
+import Alimentacao from './components/Alimentacao/Alimentacao';
 import UserScreen from './components/User/UserScreen';
 
 const Stack = createStackNavigator();
@@ -44,15 +44,15 @@ function App() {
           })}
         />
         <Stack.Screen
-          name="SearchScreen"
-          component={SearchScreen}
+          name="HealthSocial"
+          component={HealthSocial}
           options={({ navigation }) => ({
             headerShown: false,
           })}
         />
         <Stack.Screen
-          name="RequestScreen"
-          component={RequestScreen}
+          name="Alimentacao"
+          component={Alimentacao}
           options={({ navigation }) => ({
             headerShown: false,
           })}

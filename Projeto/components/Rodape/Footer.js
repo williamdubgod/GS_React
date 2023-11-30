@@ -12,11 +12,11 @@ export default function Footer() {
     };
 
     const navigateToSearch = () => {
-        navigation.navigate('SearchScreen'); 
+        navigation.navigate('HealthSocial'); 
     };
 
     const navigateToRequests = () => {
-        navigation.navigate('RequestScreen'); 
+        navigation.navigate('Alimentacao'); 
     };
 
     const navigateToUser = () => {
