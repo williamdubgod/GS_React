@@ -8,6 +8,7 @@ import HomeScreen from './components/Home/HomeScreen';
 import HealthSocial from './components/HealthSocial/HealthSocial';
 import Alimentacao from './components/Alimentacao/Alimentacao';
 import UserScreen from './components/User/UserScreen';
+import Desafios from './components/Desafios/Desafios';
 
 const Stack = createStackNavigator();
 
@@ -60,6 +61,13 @@ function App() {
         <Stack.Screen
           name="UserScreen"
           component={UserScreen}
+          options={({ navigation }) => ({
+            headerShown: false,
+          })}
+        />
+        <Stack.Screen
+          name="Desafios"
+          component={Desafios}
           options={({ navigation }) => ({
             headerShown: false,
           })}

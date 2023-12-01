@@ -11,11 +11,11 @@ export default function Footer() {
         navigation.navigate('HomeScreen'); 
     };
 
-    const navigateToSearch = () => {
+    const navigateToHealth = () => {
         navigation.navigate('HealthSocial'); 
     };
 
-    const navigateToRequests = () => {
+    const navigateToAlimentacao = () => {
         navigation.navigate('Alimentacao'); 
     };
 
@@ -28,10 +28,10 @@ export default function Footer() {
             <TouchableOpacity onPress={navigateToHome}>
                 <Icon name="home" type="material-icons" size={30} color="white" />
             </TouchableOpacity>
-            <TouchableOpacity onPress={navigateToSearch}>
+            <TouchableOpacity onPress={navigateToHealth}>
                 <Icon name="public" type="material-icons" size={30} color="white" />
             </TouchableOpacity>
-            <TouchableOpacity onPress={navigateToRequests}>
+            <TouchableOpacity onPress={navigateToAlimentacao}>
                 <Icon name="cake" type="material-icons" size={30} color="white" />
             </TouchableOpacity>
             <TouchableOpacity onPress={navigateToUser}>

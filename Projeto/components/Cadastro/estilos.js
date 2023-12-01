@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',  // Centraliza verticalmente
+    alignItems: 'center',  
     paddingHorizontal: 20,
     backgroundColor: '#E9FFE5',
   },
@@ -13,8 +13,8 @@ export default StyleSheet.create({
   },
   scrollContainer: {
     flex: 1,
-    alignItems: 'center',  // Centraliza verticalmente
-    justifyContent: 'center',  // Centraliza horizontalmente
+    alignItems: 'center',  
+    justifyContent: 'center',  
   },
   loginButton: {
     backgroundColor: 'black',

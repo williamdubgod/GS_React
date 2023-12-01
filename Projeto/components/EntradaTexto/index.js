@@ -13,7 +13,7 @@ export function EntradaTexto({ label, value, onChangeText, secureTextEntry, erro
         error={error}
         secureTextEntry={secureMode}
         onChangeText={onChangeText}
-        style={[estilos.input, { marginBottom: 10 }]} // Adicionando marginBottom para ajustar o posicionamento
+        style={[estilos.input, { marginBottom: 10 }]} 
         mode="flat"
         activeOutlineColor='#1E8187'
         right={

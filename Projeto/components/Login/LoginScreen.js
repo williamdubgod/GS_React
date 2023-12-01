@@ -38,7 +38,7 @@ export default function LoginScreen({ navigation }) {
     >
       <ScrollView
         contentContainerStyle={estilos.scrollViewContent}
-        showsVerticalScrollIndicator={false} // Oculta a barra de rolagem
+        showsVerticalScrollIndicator={false} 
       >
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <View style={estilos.content}>

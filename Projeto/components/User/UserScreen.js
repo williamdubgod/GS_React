@@ -54,10 +54,8 @@ export default function UserScreen({ navigation }) {
 
       setCamposPreenchidos(true);
 
-      // Calcular a porcentagem de saúde
       const porcentagemSaude = calcularPorcentagemSaude(calculoIMC);
 
-      // Navegar para HomeScreen com os parâmetros
       navigation.navigate('HomeScreen', { porcentagemSaude });
     } else {
       setCamposPreenchidos(false);
@@ -122,6 +120,8 @@ export default function UserScreen({ navigation }) {
             keyboardType="numeric"
             value={peso}
             onChangeText={(text) => setPeso(text)}
+            placeholder="Digite seu peso em kg"
+            placeholderTextColor="#888"
           />
 
           <Text style={estilos.formLabel}>Altura (cm):</Text>
@@ -130,6 +130,8 @@ export default function UserScreen({ navigation }) {
             keyboardType="numeric"
             value={altura}
             onChangeText={(text) => setAltura(text)}
+            placeholder="Digite sua altura em cm"
+            placeholderTextColor="#888"
           />
 
           {imc !== null && (
